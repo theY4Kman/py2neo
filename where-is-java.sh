@@ -11,7 +11,7 @@ then
     echo "usage: ${SCRIPT_NAME} JDK_VERSION"
     exit 0
 else
-    JAVA_EXE=$(update-alternatives --list java | grep -E "(java-${VERSION}-openjdk|jdk-${VERSION})" | head -1)
+    JAVA_EXE=$(update-alternatives --list java | grep -E "(java-${VERSION}-(openjdk|oracle)|jdk-${VERSION})" | head -1)
     if [ "${JAVA_EXE}" == "" ]
     then
         JHOME="${HOME}/openjdk${VERSION}"
